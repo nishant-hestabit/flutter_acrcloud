@@ -74,8 +74,8 @@ public class SwiftFlutterAcrcloudPlugin: NSObject, FlutterPlugin {
 
   func handleResult(_ res: String, resType: ACRCloudResultType) -> Void {
     DispatchQueue.main.async {
-      self._client?.stopRecordRec()
-      self.isListening = false
+      //self._client?.stopRecordRec()
+      //self.isListening = false
       self.channel.invokeMethod("result", arguments: res)
     }
   }
